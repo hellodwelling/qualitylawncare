@@ -64,26 +64,26 @@
       
          <div class = "px-4 py-2 lg:pb-3 mt-2 text-xl font-bold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 lg:mt-0 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"x-data="{open: false}">
         
-            <a x-on:click.prevent="open = true" class="" href="">Send Us a Text</a>
+            <a target = "_blank"  x-on:click.prevent="open = true" class="" href="">Send us a Text</a>
         
       
-        <div x-show.transition.opacity="open" class="p-4 fixed flex justify-center items-center inset-0 bg-black bg-opacity-75 z-50">
+        <div x-show.transition.opacity="open" class="p-4 fixed flex justify-center items-center inset-0 bg-black text-black bg-opacity-75 z-50">
                 <form x-on:click.away="open = false" x-show.transition="open" class="max-w-3xl max-h-full h-auto p-8 py-10 overflow-auto bg-white border-b-2 border-gray-300 rounded-lg shadow-2xl px-7 mt-16 md:mt-0 md:w-2/5">
-                        <h3 class="mb-6 text-2xl font-medium text-center">Send us a Text</h3>
+                        <h3 class="mb-6 text-2xl font-medium text-black text-center">Send us a Text</h3>
                         <div class="block mb-4 border border-gray-200 rounded-lg">
-                            <input type="text" name="first-name" id="1-first-name" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="First Name">
+                            <input type="text" name="first-name" id="2-first-name" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="First Name">
                         </div>
                         <div class="block mb-4 border border-gray-200 rounded-lg">
-                            <input type="text" name="last-name" id="1-last-name" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="Last Name">
+                            <input type="text" name="last-name" id="2-last-name" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="Last Name">
                         </div>
                         <div class="block mb-4 border border-gray-200 rounded-lg">
-                            <input type="text" name="phone-number" id="1-phone-number" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="Phone Number">
+                            <input type="text" name="phone-number" id="2-phone-number" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="Phone Number">
                         </div>
                         <div class="block mb-4 border border-gray-200 rounded-lg">
-                            <textarea name="message" cols="5" id="1-message" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="What is your message?"></textarea>
+                            <textarea name="message" cols="5" id="2-message" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="What is your message?"></textarea>
                         </div>
                         <div class="block">
-                            <button type="button" onclick= "send_sms(1, 'Quality-Care-Lawn-Care')" class="w-full px-3 py-4 font-bold font-lg text-white bg-gray-900 rounded-lg">Send</button>
+                        <button type="button"  onclick= "send_sms(2, 'Quality-Care-Lawn-Care')" class="w-full px-3 py-4 font-bold font-lg text-white  bg-gray-900  rounded-lg">Send</button> 
                         </div>
                         
     
@@ -104,35 +104,35 @@
     <div class="flex justify-end p-8 bg-gray-900 lg:py-32 lg:px-16 lg:pl-10 lg:w-1/2">
         <div class="flex flex-col items-center lg:items-start justify-center w-full lg:max-w-lg">
             <h5 class="mb-3 text-3xl text-center font-extrabold  leading-none sm:text-4xl lg:text-7xl text-center lg:text-left">
-                Quality Care Lawn Care
+                Quality Care Lawn Care  
             </h5>
             
             <p class="py-5 mb-5 lg:text-xl text-center lg:text-left">
-                Quality Work at an Affordable Price
+                Quality Work at an Affordable Price. Give me a call and get a free quote! 
             </p>
             
             <div class="flex text-center justify-center items-center" x-data="{open: false}">
                 <button type="button" x-on:click.prevent="open = true" class="inline-flex items-center justify-center h-24 px-6 lg:mr-6 tracking-wide transition duration-200 rounded-lg focus:shadow-outline focus:outline-none  bg-gray-200 text-black hover:bg-white hover:text-gray-400 ">
-                    <h5 class="text-3xl font-extrabold">Send us a text</h5> 
+                    <h5 class="text-3xl font-extrabold">Send us a Text</h5> 
                 </button>
                 <div x-show.transition.opacity="open" class="p-4 fixed flex justify-center items-center inset-0 bg-black bg-opacity-75 z-50">
-                    <form x-on:click.away="open = false" x-show.transition="open" class="max-w-3xl max-h-full h-auto p-8 py-10 overflow-auto bg-white border-b-2 border-gray-300 rounded-lg shadow-2xl px-7 mt-16 md:mt-0 md:w-2/5">
-                            <h3 class="mb-6 text-2xl font-medium text-center">Send us a Text</h3>
-                            <div class="block mb-4 border border-gray-200 rounded-lg">
-                                <input type="text" name="first-name" id="2-first-name" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="First Name">
-                            </div>
-                            <div class="block mb-4 border border-gray-200 rounded-lg">
-                                <input type="text" name="last-name" id="2-last-name" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="Last Name">
-                            </div>
-                            <div class="block mb-4 border border-gray-200 rounded-lg">
-                                <input type="text" name="phone-number" id="2-phone-number" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="Phone Number">
-                            </div>
-                            <div class="block mb-4 border border-gray-200 rounded-lg">
-                                <textarea name="message" cols="5" id="2-message" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="What is your message?"></textarea>
-                            </div>
-                            <div class="block">
-                                <button type="button" onclick= "send_sms(2, 'Quality-Care-Lawn-Care')" id= "send" class="w-full px-3 py-4 font-bold font-lg text-white bg-gray-900 rounded-lg">Send</button>
-                            </div>
+                    <form x-on:click.away="open = false" x-show.transition="open" class=" text-black max-w-3xl max-h-full h-auto p-8 py-10 overflow-auto bg-white border-b-2 border-gray-300 rounded-lg shadow-2xl px-7 mt-16 md:mt-0 md:w-2/5">
+                            <h3 class="mb-6 text-2xl font-medium text-black text-center">Send us a Text</h3>
+                        <div class="block mb-4 border border-gray-200 rounded-lg">
+                            <input type="text" name="first-name" id="1-first-name" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="First Name">
+                        </div>
+                        <div class="block mb-4 border border-gray-200 rounded-lg">
+                            <input type="text" name="last-name" id="1-last-name" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="Last Name">
+                        </div>
+                        <div class="block mb-4 border border-gray-200 rounded-lg">
+                            <input type="text" name="phone-number" id="1-phone-number" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="Phone Number">
+                        </div>
+                        <div class="block mb-4 border border-gray-200 rounded-lg">
+                            <textarea name="message" cols="5" id="1-message" class="block w-full px-4 py-3 border-2 border-transparent rounded-lg focus:border-blue-500 focus:outline-none" placeholder="What is your message?"></textarea>
+                        </div>
+                        <div class="block">
+                        <button type="button"  onclick= "send_sms(1, 'Quality-Care-Lawn-Care')" class="w-full px-3 py-4 font-bold font-lg text-white  bg-gray-900  rounded-lg">Send</button> 
+                        </div>
                             
      
                     </form>
@@ -165,7 +165,7 @@
                     About Us
                 </h5>
                 <p class="py-5 px-5 lg:px-0 mb-5 text-center lg:text-left  lg:text-xl">
-                We only provide the best lawn care services throughout the Charlotte, Denver, Gaston, and Kings Mountain areas. Our number one priority is your property. Our team of professionals will work with you to make your landscaping goals a reality.
+                We only provide the best lawn care services throughout the Charlotte, Denver, Gaston, and Kings Mountain areas. Our number one priority is your property. Our team of professionals will work with you to make your landscaping goals a reality. We offer a military and healthcare worker discount. Additionally, every customer to refer me will be put into a raffle for a $10 off lawn cut. 
                 </p>                
             </div>
 
@@ -231,6 +231,19 @@
                     <div class="box-border flex flex-col items-center  h-full px-2 py-4 md:py-8 mx-4 leading-6 text-center border-solid ">
                         
                         <div class="md:mt-6 font-sans text-center border-0 border-gray-200 ">
+                            <span class="box-border text-xl font-bold leading-none tracking-wider border-solid  text-gray-400  ">Tree Pruning</span>
+                            <p
+                                class="box-border mx-0 mt-2 mb-0 font-normal leading-snug text-center    border-solid ">
+                                Overgrown trees can scatter leaves and overhanging branches can grow into unwanted places. Proper tree pruning keeps the yard organized and encourages healthier tree growth. We help to ensure your trees are healthy yet contained.
+                            </p>
+                        </div>
+                    </div>
+                </div>        
+                    
+                <div class="max-w-xs col-span-4 font-sans border-0 border-gray-200 ">
+                    <div class="box-border flex flex-col items-center  h-full px-2 py-4 md:py-8 mx-4 leading-6 text-center border-solid ">
+                        
+                        <div class="md:mt-6 font-sans text-center border-0 border-gray-200 ">
                             <span class="box-border text-xl font-bold leading-none tracking-wider border-solid  text-gray-400  ">Mowing</span>
                             <p
                                 class="box-border mx-0 mt-2 mb-0 font-normal leading-snug text-center    border-solid ">
@@ -274,19 +287,6 @@
                             <p
                                 class="box-border mx-0 mt-2 mb-0 font-normal leading-snug text-center    border-solid ">
                                 Everything from pine needles to gumballs (yes, really) we&#x27;ve seen it and removed it. If you have a buildup of debris on your lawn trust us to take care of it quickly and efficiently.
-                            </p>
-                        </div>
-                    </div>
-                </div>        
-                    
-                <div class="max-w-xs col-span-4 font-sans border-0 border-gray-200 ">
-                    <div class="box-border flex flex-col items-center  h-full px-2 py-4 md:py-8 mx-4 leading-6 text-center border-solid ">
-                        
-                        <div class="md:mt-6 font-sans text-center border-0 border-gray-200 ">
-                            <span class="box-border text-xl font-bold leading-none tracking-wider border-solid  text-gray-400  ">Tree Pruning</span>
-                            <p
-                                class="box-border mx-0 mt-2 mb-0 font-normal leading-snug text-center    border-solid ">
-                                Overgrown trees can scatter leaves and overhanging branches can grow into unwanted places. Proper tree pruning keeps the yard organized and encourages healthier tree growth. We help to ensure your trees are healthy yet contained.
                             </p>
                         </div>
                     </div>
@@ -341,15 +341,11 @@
                     
                 
                 
-                    <div class="flex sm:h-30 md:h-auto md:w-1/3 px-4 mb-8"><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/K0LJ94VID8A1HQMWEI9K6VDT0M57F30JTUO5JUWD.jpeg" alt="photo of past work" loading="lazy" ></div>
-                    
-                
-                
                     <div class="flex sm:h-30 md:h-auto md:w-1/3 px-4 mb-8"><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/LWSY1K5MCZ8GTBBBCLKLHEPMGW8G954USGT9DWQ3.jpeg" alt="photo of past work" loading="lazy" ></div>
                     
                 
                 
-                    <div class="flex sm:h-30 md:h-auto md:w-1/3 px-4 mb-8"><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/8QK0LFEE6VNR3SVN2FH2BOJ28DP0795K9PHEYB1H.jpeg" alt="photo of past work" loading="lazy" ></div>
+                    <div class="flex sm:h-30 md:h-auto md:w-1/3 px-4 mb-8"><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/D4UG1V7WMM44ADOTWZ5UK7CELB3FF23K8SCLDUVY.png" alt="photo of past work" loading="lazy" ></div>
                     
                  
                 </div>     
@@ -375,8 +371,8 @@
 
                     
             
-                    <div class="flex flex-col items-start justify-start w-full h-auto mb-12 lg:w-1/2">
-                    <div class="flex items-start ">
+                    <div class="flex flex-col items-center lg:items-start justify-center w-full h-auto mb-12 lg:w-1/2">
+                    <div class="flex items-center lg:items-start ">
                         
                         <div class="flex flex-col justify-start items-center lg:items-start ">
                             <h4 class="font-bold  text-gray-200  ">Jane Smith</h4>
@@ -396,7 +392,7 @@
                                 
                                 
                             </div>
-                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl lg:text-left   text-white ">"I didn&#x27;t feel like just another number in their book, but like a valued customer"</blockquote>                           
+                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"I didn&#x27;t feel like just another number in their book, but like a valued customer"</blockquote>                           
                         </div>
                     </div>
                     
@@ -404,8 +400,8 @@
 
                     
             
-                    <div class="flex flex-col items-start justify-start w-full h-auto mb-12 lg:w-1/2">
-                    <div class="flex items-start ">
+                    <div class="flex flex-col items-center lg:items-start justify-center w-full h-auto mb-12 lg:w-1/2">
+                    <div class="flex items-center lg:items-start ">
                         
                         <div class="flex flex-col justify-start items-center lg:items-start ">
                             <h4 class="font-bold  text-gray-200  ">Richard Benjamin</h4>
@@ -425,7 +421,7 @@
                                 
                                 
                             </div>
-                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl lg:text-left   text-white ">"Quality Care and their team were curteous and professional throughout the entire job. Could not reccomend enough"</blockquote>                           
+                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"Quality Care and their team were curteous and professional throughout the entire job. Could not reccomend enough"</blockquote>                           
                         </div>
                     </div>
                     
@@ -433,8 +429,8 @@
 
                     
             
-                    <div class="flex flex-col items-start justify-start w-full h-auto mb-12 lg:w-1/2">
-                    <div class="flex items-start ">
+                    <div class="flex flex-col items-center lg:items-start justify-center w-full h-auto mb-12 lg:w-1/2">
+                    <div class="flex items-center lg:items-start ">
                         
                         <div class="flex flex-col justify-start items-center lg:items-start ">
                             <h4 class="font-bold  text-gray-200  ">Wes Perguson</h4>
@@ -454,7 +450,7 @@
                                 
                                 
                             </div>
-                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl lg:text-left   text-white ">"5 STARS!!! This company is great. Very professional and efficient. The pricing is better than most. They are quick to respond to customers. They showed up on time and made sure I was satisfied with the work. Thank you for the hard work you did."</blockquote>                           
+                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"5 STARS!!! This company is great. Very professional and efficient. The pricing is better than most. They are quick to respond to customers. They showed up on time and made sure I was satisfied with the work. Thank you for the hard work you did."</blockquote>                           
                         </div>
                     </div>
                     
@@ -462,8 +458,8 @@
 
                     
             
-                    <div class="flex flex-col items-start justify-start w-full h-auto mb-12 lg:w-1/2">
-                    <div class="flex items-start ">
+                    <div class="flex flex-col items-center lg:items-start justify-center w-full h-auto mb-12 lg:w-1/2">
+                    <div class="flex items-center lg:items-start ">
                         
                         <div class="flex flex-col justify-start items-center lg:items-start ">
                             <h4 class="font-bold  text-gray-200  ">Caroline S.</h4>
@@ -483,7 +479,7 @@
                                 
                                 
                             </div>
-                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl lg:text-left   text-white ">"Chris and his group removed a tree and lots of weeds in our yard. Very good work !! So pleased."</blockquote>                           
+                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"Chris and his group removed a tree and lots of weeds in our yard. Very good work !! So pleased."</blockquote>                           
                         </div>
                     </div>
                     
